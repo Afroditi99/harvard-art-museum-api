@@ -1,0 +1,114 @@
+{
+	"info": {
+		"_postman_id": "ed6bc8a8-5e1d-475d-81f4-9a6dc6635dd8",
+		"name": "museumsattractions",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://test.api.amadeus.com/v1/security/oauth2/token",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "YOUR_CLIENT_ID",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "YOUR_CLIENT_ID",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://test.api.amadeus.com/v1/security/oauth2/token",
+					"protocol": "https",
+					"host": [
+						"test",
+						"api",
+						"amadeus",
+						"com"
+					],
+					"path": [
+						"v1",
+						"security",
+						"oauth2",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://test.api.amadeus.com/v1/reference-data/locations/pois?latitude=41.902782&longitude=12.496366&radius=5&page%5Blimit%5D=10&page%5Boffset%5D=0",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://test.api.amadeus.com/v1/reference-data/locations/pois?latitude=41.902782&longitude=12.496366&radius=5&page%5Blimit%5D=10&page%5Boffset%5D=0",
+					"protocol": "https",
+					"host": [
+						"test",
+						"api",
+						"amadeus",
+						"com"
+					],
+					"path": [
+						"v1",
+						"reference-data",
+						"locations",
+						"pois"
+					],
+					"query": [
+						{
+							"key": "latitude",
+							"value": "41.902782"
+						},
+						{
+							"key": "longitude",
+							"value": "12.496366"
+						},
+						{
+							"key": "radius",
+							"value": "5"
+						},
+						{
+							"key": "page%5Blimit%5D",
+							"value": "10"
+						},
+						{
+							"key": "page%5Boffset%5D",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
